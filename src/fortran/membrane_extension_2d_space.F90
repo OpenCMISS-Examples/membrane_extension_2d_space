@@ -116,8 +116,8 @@ PROGRAM MEMBRANEEXTENSION2DSPACE
   CALL cmfe_DiagnosticsSetOn(CMFE_FROM_DIAG_TYPE,[1,2,3,4,5],"Diagnostics",["PROBLEM_FINITE_ELEMENT_CALCULATE"],Err)
 
   !Get the number of computational nodes and this computational node number
-  CALL cmfe_ComputationalNumberOfNodesGet(NumberOfComputationalNodes,Err)
-  CALL cmfe_ComputationalNodeNumberGet(ComputationalNodeNumber,Err)
+  CALL cmfe_ComputationalNumberOfNodesGet(numberOfComputationalNodes,err)
+  CALL cmfe_ComputationalNodeNumberGet(computationalNodeNumber,err)
 
   !Create a CS - default is 3D rectangular cartesian CS with 0,0,0 as origin
   CALL cmfe_CoordinateSystem_Initialise(CoordinateSystem,Err)
